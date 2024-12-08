@@ -91,7 +91,7 @@ export default function Screen() {
           </div>
 
           {/* Arrow Button */}
-          <div className="fixed z-10 flex justify-center items-center w-[48px] h-[48px] bg-blue-600 text-white rounded-md self-center lg:self-auto">
+          <div className=" flex justify-center items-center w-[48px] h-[48px] bg-blue-600 text-white rounded-md self-center lg:self-auto">
             <a href="#navbar"><BsArrowDownUp /></a>
           </div>
 
