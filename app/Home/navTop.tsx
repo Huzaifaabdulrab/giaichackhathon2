@@ -11,7 +11,10 @@ export default function NavTop() {
   };
 
   return (
+    <>
+<NavTop/>
     <div onClick={handleImageClick}  className={` ${isImageClicked ? "hidden" : "" } flex flex-wrap justify-between items-center lg:p-8 lg:gap-3 ml-1 w-full h-[141px] bg-white relative`}>
+    
       {/* Logo and Title */}
       <div className="w-[543px] h-[40px] flex lg:ml-[44px]">
         {/* Image click event */}
@@ -35,5 +38,6 @@ export default function NavTop() {
         <span className="font-bold text-[20px]">8 Aug 2022</span>
       </div>
     </div>
+    </>
   );
 }

@@ -5,10 +5,9 @@
 body{
   background-color: #F6F7F9;
 }
-/* .logo{
-    font-weight: 500;
-} */
-/* Styling for small and medium devices */
+html{
+  scroll-behavior: smooth;
+}
 @media (max-width: 1023px) {
     /* Make the container stack items vertically */
     .relative {
