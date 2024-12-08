@@ -1,5 +1,4 @@
 'use client'
-import { BsArrowDownUp } from "react-icons/bs";
 import { useState } from "react";
 
 export default function Categories() {
