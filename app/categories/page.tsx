@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import Footer from "../Home/footer";
 import { BsFuelPumpFill } from "react-icons/bs";
 import { HiUsers } from "react-icons/hi2";
 import { LuLoaderPinwheel } from "react-icons/lu";
@@ -28,7 +27,7 @@ import Car9 from "../public/images/Car9.png";
 // import Car12 from "../public/images/Car12.png";
 import { BsArrowDownUp } from "react-icons/bs";
 
-import { Inter, Poppins } from "next/font/google";
+import {  Poppins } from "next/font/google";
 // Declare Inter font
 const inter = Poppins({
   subsets: ["latin"],

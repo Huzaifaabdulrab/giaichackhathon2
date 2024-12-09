@@ -20,7 +20,7 @@ import Car12 from "../public/images/Car12.png";
 import Car8 from "../public/images/Car8.png";
 import Car9 from "../public/images/Car9.png";
 import Car10 from "../public/images/Car10.png";
-import { Inter, Poppins } from "next/font/google";
+import {  Poppins } from "next/font/google";
 // Declare Inter font
 const inter = Poppins({
   subsets: ["latin"],

@@ -1,6 +1,5 @@
 'use client'
 import { useState } from "react";
-import Footer from "./footer";
 import { Inter } from "next/font/google";
 import { BsFuelPumpFill } from "react-icons/bs";
 import { HiUsers } from "react-icons/hi2";
