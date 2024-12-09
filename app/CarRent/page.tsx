@@ -21,6 +21,7 @@ import Car8 from "../public/images/Car8.png";
 import Car9 from "../public/images/Car9.png";
 import Car10 from "../public/images/Car10.png";
 import {  Poppins } from "next/font/google";
+import SideBar from "../Home/sideBar";
 // Declare Inter font
 const inter = Poppins({
   subsets: ["latin"],
@@ -73,81 +74,8 @@ export default function CarRent() {
   };  
   return(
         <div className="w-full h-full top-[124px] flex">
-        <div className="hidden lg:block w-[360px] border bg-white">
-          <div className="w-[176px] h-[352px] mt-[32px] ml-[32px] gap-[32px]  ">
-            <p className="sideNavTxt text-[12px] font-semibold text-sideNav mb-6">Type</p>
-            <input
-              type="checkbox"
-              checked 
-              name="Sport"
-              id="Sport"
-              className="mb-6  mr-2"
-            />
-            <span className="text-gray-700  tracking-[-2%] text-[20px]">
-              Sport <span className="text-sideNav"> (10)</span>
-              <br />
-            </span>
-            <input type="checkbox" checked name="#" id="#" className=" mb-6  mr-2" />
-            <span className="text-gray-700  tracking-[-2%] text-[20px]">
-              SUV <span className="text-sideNav"> (10)</span>
-              <br />
-            </span>
-            <input type="checkbox" name="#" id="#" className="mb-6  mr-2" />
-            <span className="text-gray-700  tracking-[-2%] text-[20px]">
-              MPV <span className="text-sideNav"> (10)</span>
-              <br />
-            </span>
-            <input type="checkbox" name="#" id="#" className="mb-6  mr-2" />
-            <span className="text-gray-700  tracking-[-2%] text-[20px]">
-              Sedan <span className="text-sideNav"> (10)</span>
-              <br />
-            </span>
-            <input type="checkbox" name="#" id="#" className="mb-6  mr-2" />
-            <span className="text-gray-700  tracking-[-2%] text-[20px]">
-              Coupe <span className="text-sideNav"> (10)</span>
-              <br />
-            </span>
-            <input type="checkbox" name="#" id="#" className="mb-6  mr-2" />
-            <span className="text-gray-700  tracking-[-2%] text-[20px]">
-              Hatchback <span className="text-sideNav"> (10)</span>
-              <br />
-            </span>
-          </div>
-          
-          <div className="w-[176px] h-[352px] mt-[32px] ml-[32px] gap-[32px] ">
-            <p className="sideNavTxt text-[12px] font-semibold text-sideNav mb-6 ">CAPACITY</p>
-
-            <input type="checkbox" checked  name="#" id="#" className="mb-6  mr-2" />
-            <span className="text-gray-700  tracking-[-2%] text-[20px]">
-              2 Person <span className="text-sideNav"> (10)</span>
-              <br />
-            </span>
-            <input type="checkbox" name="#" id="#" className="mb-6  mr-2" />
-            <span className="text-gray-700  tracking-[-2%] text-[20px]">
-              4 Person <span className="text-sideNav"> (10)</span>
-              <br />
-            </span>
-            <input type="checkbox" name="#" id="#" className="mb-6  mr-2" />
-            <span className="text-gray-700  tracking-[-2%] text-[20px]">
-              6 Person <span className="text-sideNav"> (10)</span>
-              <br />
-            </span>
-            <input type="checkbox" checked  name="#" id="#" className="mb-6  mr-2" />
-            <span className="text-gray-700  tracking-[-2%] text-[20px]">
-              8 Person <span className="text-sideNav"> (10)</span>
-              <br />
-            </span>
-          </div>
-          <div className="rang">
-            
-          <div className="w-[176px] h-[352px]   ml-[32px] gap-[32px] ">
-            <p className="sideNavTxt text-[12px] font-semibold text-sideNav mb-6 ">PRICE</p>
-            <input type="range" className="w-[200px] h-[20px]"/>
-            <p className={`text-[20px] text-[#596780] font-semibold ${inter.className} `}>Max . $100.00</p>
-            </div>
-            
-          </div>
-         </div>
+        <SideBar/>
+         <div>
          <div className="">
             <div className=" lg:ml-44 screenLeft lg:w-[1140px] lg:h-full lg:flex flex-col">
     {/* Large Image */}
@@ -155,7 +83,7 @@ export default function CarRent() {
   {/* Left Section */}
   <div className="flex flex-col items-center lg:items-start w-full lg:w-1/2">
     {/* Large Image */}
-    <div className="w-[352px]  h-[232px] mr-[6.5%]  lg:w-[492px] lg:h-[360px] mb-6">
+    <div className="w-auto  h-[232px] mr-[6.5%]  lg:w-[492px] lg:h-[360px] mb-6">
       <Image src={leftTopImg} alt="Large Car Image" className="w-full h-full object-cover rounded-lg" />
     </div>
 
@@ -172,7 +100,8 @@ export default function CarRent() {
       </div>
     </div>
   </div>
-  <div className="w-[327px] h-[408px] ml-5 lg:ml-0 mt-20 lg:mt-0 lg:w-[492px] lg:h-auto bg-white shadow-md rounded-lg p-6">
+
+  <div className="w-auto h-[408px] lg:ml-0 mt-20 lg:mt-0 lg:w-[492px] lg:h-auto bg-white shadow-md rounded-lg p-6">
   {/* Title */}
   <h3 className="text-[28px] lg:text-[34px] font-bold text-gray-900 mb-2">Nissan GT - R</h3>
   <div className="flex items-center mb-4">
@@ -182,7 +111,7 @@ export default function CarRent() {
 
   {/* Description */}
   <p className="text-gray-700 lg:text-[20px] text-[12px] mb-6">
-    NISMO has become the embodiment of Nissan’s outstanding performance, inspired by the most unforgiving proving ground, the &quot;race track&quot;.
+    NISMO has become the embodiment of Nissan’s outstanding performance, inspired by the most unforgiving proving ground, the "race track".
   </p>
 
   {/* Specifications */}
@@ -202,23 +131,21 @@ export default function CarRent() {
   </div>
 
   {/* Pricing and Button */}
-  <div className="flex flex-col sm:flex-row items-start justify-between">
-    <div className="mb-4 sm:mb-0">
-      <p className="text-[20px] lg:text-[24px] font-bold text-gray-900">
-        $80.00 / <span className="text-[14px] font-normal text-gray-500">day</span>
-      </p>
-      <p className="text-[14px] text-gray-500 line-through ml-2">$100.00</p>
-    </div>
-    <button className="bg-blue-500 text-white text-[16px] font-medium px-6 py-3 rounded-lg shadow hover:bg-blue-600">
+  <div className="flex  sm:flex-row items-start justify-between">
+  <span><span className="text-[20px] lg:text-[24px] font-bold text-gray-900">$80.00/</span><span  className="text-[14px] text-gray-500 ">days</span> <span><button className="w-[140px] h-[56px] lg:w-auto  bg-blue-500 text-white text-[16px] font-medium px-6 py-3 rounded-lg shadow hover:bg-blue-600 lg:ml-44 ">
       Rent Now
-    </button>
+    </button></span></span>
   </div>
+  <p className="text-[14px] text-gray-500 line-through ml-2">$100.00 </p>
+  
+</div>
 </div>
 
-<div className="bg-white lg:w-[1016px] lg:h-auto w-[327px] h-auto ml-10 lg:ml-56 mt-[92px] rounded-lg shadow-md p-4 lg:p-10">
+</div>
+<div className="bg-white lg:w-[1016px] lg:h-auto w-auto h-auto  lg:ml-56 mt-[92px] rounded-lg shadow-md p-4 lg:p-10">
   {/* Header */}
   <div className="flex items-center text-[20px] font-semibold mb-6">
-    Reviews
+    Reviews 
     <span className="ml-2 w-[44px] text-white text-center h-[38px] rounded-[4px] p-1 bg-btnBg">
       13
     </span>
@@ -249,7 +176,7 @@ export default function CarRent() {
   </div>
 
   {/* Review 2 */}
-  <div className="w-full flex flex-col lg:flex-row items-start gap-4 mb-8">
+  <div className="w-full flex flex-col lg:flex-row items-start gap-4 mb-8 ">
     {/* Profile Picture */}
     <Image
       src={Profile2}
@@ -273,8 +200,7 @@ export default function CarRent() {
   </div>
 </div>
 
-
-<div className="flex gap-[100px] lg:gap-[860px]   lg:w-[1016px] lg:h-[44px] justify-center lg:ml-56 ml-5 w-[372px] h-[20px] mt-10">
+<div className="flex gap-[100px] lg:gap-[860px]   lg:w-[1016px] lg:h-[44px] justify-center lg:ml-56 ml-5 w- h-[20px] mt-10">
 <p className="text-lablelTxt text-[16px]">Recent Car</p>
          <p className="text-[16px] text-btnBg">View All</p>
 </div>
@@ -427,7 +353,6 @@ export default function CarRent() {
        
 
  </div>
-</div>     
 </div>     
  
 </div>     
