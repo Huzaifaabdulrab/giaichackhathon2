@@ -148,7 +148,6 @@ export default function CarRent() {
             
           </div>
          </div>
-         <div>
          <div className="">
             <div className=" lg:ml-44 screenLeft lg:w-[1140px] lg:h-full lg:flex flex-col">
     {/* Large Image */}
@@ -173,7 +172,6 @@ export default function CarRent() {
       </div>
     </div>
   </div>
-
   <div className="w-[327px] h-[408px] ml-5 lg:ml-0 mt-20 lg:mt-0 lg:w-[492px] lg:h-auto bg-white shadow-md rounded-lg p-6">
   {/* Title */}
   <h3 className="text-[28px] lg:text-[34px] font-bold text-gray-900 mb-2">Nissan GT - R</h3>
@@ -184,7 +182,7 @@ export default function CarRent() {
 
   {/* Description */}
   <p className="text-gray-700 lg:text-[20px] text-[12px] mb-6">
-    NISMO has become the embodiment of Nissan’s outstanding performance, inspired by the most unforgiving proving ground, the "race track".
+    NISMO has become the embodiment of Nissan’s outstanding performance, inspired by the most unforgiving proving ground, the &quot;race track&quot;.
   </p>
 
   {/* Specifications */}
@@ -216,13 +214,11 @@ export default function CarRent() {
     </button>
   </div>
 </div>
-</div>
 
-</div>
-<div className="bg-white lg:w-[1016px] lg:h-auto w-[327px] h-auto ml-10  lg:ml-56 mt-[92px] rounded-lg shadow-md p-4 lg:p-10">
+<div className="bg-white lg:w-[1016px] lg:h-auto w-[327px] h-auto ml-10 lg:ml-56 mt-[92px] rounded-lg shadow-md p-4 lg:p-10">
   {/* Header */}
   <div className="flex items-center text-[20px] font-semibold mb-6">
-    Reviews 
+    Reviews
     <span className="ml-2 w-[44px] text-white text-center h-[38px] rounded-[4px] p-1 bg-btnBg">
       13
     </span>
@@ -276,6 +272,7 @@ export default function CarRent() {
     </div>
   </div>
 </div>
+
 
 <div className="flex gap-[100px] lg:gap-[860px]   lg:w-[1016px] lg:h-[44px] justify-center lg:ml-56 ml-5 w-[372px] h-[20px] mt-10">
 <p className="text-lablelTxt text-[16px]">Recent Car</p>
@@ -430,6 +427,7 @@ export default function CarRent() {
        
 
  </div>
+</div>     
 </div>     
  
 </div>     
