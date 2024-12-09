@@ -20,14 +20,8 @@ import Car12 from "../public/images/Car12.png";
 import Car8 from "../public/images/Car8.png";
 import Car9 from "../public/images/Car9.png";
 import Car10 from "../public/images/Car10.png";
-import {  Poppins } from "next/font/google";
 import SideBar from "../Home/sideBar";
-// Declare Inter font
-const inter = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-});
-;
+
 const carData = [
   
 { id: 11, name: "MG ZX Excite", type: "Hatchback", image: Car11, fuel: "90L", transmission: "Manual", people: "4 People", price: "$74.00", duration: "day", heartColor: "pink" },
