@@ -111,7 +111,7 @@ export default function CarRent() {
 
   {/* Description */}
   <p className="text-gray-700 lg:text-[20px] text-[12px] mb-6">
-    NISMO has become the embodiment of Nissan’s outstanding performance, inspired by the most unforgiving proving ground, the "race track".
+  NISMO has become the embodiment of Nissan&rsquo;s outstanding performance, inspired by the most unforgiving proving ground, the &ldquo;race track&rdquo;.
   </p>
 
   {/* Specifications */}
