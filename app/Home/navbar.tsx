@@ -18,7 +18,7 @@ const Navbar = () => {
       
       {/* Logo and Search Bar */}
       <div className="flex flex-col md:flex-row items-center gap-4 md:gap-16 w-full md:w-auto">
-        <h1 className={`${inter.className} text-[#3563e9] text-4xl`}>MORENT</h1>
+        <h1 className={`logo ${inter.className} text-[#3563e9] text-[32px] `}>MORENT</h1>
         <div className="relative w-full md:w-[492px]">
           <CiSearch
             className='w-[24px] h-[24px] absolute top-1/2 left-3 transform -translate-y-1/2'

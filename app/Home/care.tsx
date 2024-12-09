@@ -72,7 +72,7 @@ export default function Cars() {
         <div className="flex gap-[50px] lg:justify-center items-center mb-8 lg:gap-[1079px]">
           <p className="text-lg text-[#90A3BF] font-semibold">Popular Cars</p>
           <p className="text-sm text-blue-600 cursor-pointer hover:underline">
-            <a href="/Categories">View All</a>
+            <a href="/categories">View All</a>
           </p>
         </div>
 
@@ -128,7 +128,7 @@ export default function Cars() {
                   <span className="text-iconsCard text-[14px]">{car.duration}</span>
                 </p>
                 <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
-                  Rent Now
+                  <a href="/CarRent">Rent Now</a>
                 </button>
               </div>
             </div>
@@ -147,7 +147,6 @@ export default function Cars() {
           </div>
         )}
       </div>
-      <Footer />
     </>
   );
 }

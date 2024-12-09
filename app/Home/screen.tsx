@@ -1,3 +1,5 @@
+
+
 import ad1 from "../public/images/Ads 1.png";
 import ad2 from "../public/images/Ads 2.png";
 import { Button } from "@/components/ui/button";
@@ -15,19 +17,19 @@ export default function Screen() {
           <div className="relative w-full lg:w-[640px] h-[380px] rounded-[10px]">
             <Image
               src={ad1}
-              alt="Img 1"
+              alt="Advertisement 1"
               className="object-cover w-full h-full rounded-[10px]"
             />
-            <div className="absolute top-4 left-4 w-[90%] md:w-[70%] space-y-4">
-              <h1 className="text-[20px] md:text-[32px] font-semibold text-white">
+            <div className="absolute top-7 left-4 w-[90%] md:w-[70%] space-y-4">
+              <h1 className="lg:w-[272px] lg:h-[96px] text-[20px] md:text-[28px] font-semibold text-white">
                 The Best Platform for Car Rental
               </h1>
-              <span className="text-[12px] md:text-[16px] text-gray-50">
-                Ease of doing a car rental safely and reliably. Of course at a low price.
-              </span>
-              <Button className="w-[100px] md:w-[120px] h-[36px] md:h-[44px] bg-btnBg text-white mt-4">
+              <div className="lg:w-[284px] lg:h-[48px] text-[12px] md:text-[16px] text-gray-50">
+               <p> Ease of doing a car rental safely and reliably. Of course, at a low price.
+               </p><Button className=" block w-[100px] md:w-[120px] h-[36px] md:h-[44px] bg-blue-500 text-white mt-4">
                 Rental Car
               </Button>
+              </div>
             </div>
           </div>
 
@@ -35,20 +37,21 @@ export default function Screen() {
           <div className="relative hidden lg:block w-full lg:w-[640px] h-[380px] rounded-[10px]">
             <Image
               src={ad2}
-              alt="Img 2"
+              alt="Advertisement 2"
               className="object-cover w-full h-full rounded-[10px]"
             />
-            <div className="absolute top-4 left-4 w-[90%] md:w-[70%] space-y-4">
-              <h1 className="text-[20px] md:text-[32px] font-semibold text-white">
-                Easy way to rent a car at a low price
+            <div className="absolute top-7 left-4 w-[90%] md:w-[70%] space-y-4">
+              <h1 className="lg:w-[272px] lg:h-[96px] text-[20px] md:text-[28px] font-semibold text-white">
+              Easy way to rent a car at a low price
               </h1>
-              <span className="text-[12px] md:text-[16px] text-gray-50">
-                Providing cheap car rental services and safe and comfortable facilities.
-              </span>
-              <Button className="w-[100px] md:w-[120px] h-[36px] md:h-[44px] bg-[#54A6FF] text-white mt-4">
+              <div className="lg:w-[284px] lg:h-[48px] text-[12px] md:text-[16px] text-gray-50">
+               <p>
+               Providing cheap car rental services and safe and comfortable facilities.
+               </p><Button className=" block w-[100px] md:w-[120px] h-[36px] md:h-[44px] bg-blue-500 text-white mt-4">
                 Rental Car
               </Button>
-            </div>
+              </div>
+              </div>
           </div>
         </div>
 
@@ -64,35 +67,32 @@ export default function Screen() {
             </h2>
             <div className="flex flex-wrap gap-4 mt-4">
               {/* Location */}
-              <div className="w-full md:w-auto flex-1">
+              <div className="flex-1">
                 <label className="text-[14px] font-bold">Location</label>
                 <select className="w-full h-[36px] mt-2 text-[12px] text-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" defaultValue="">
                   <option value="" disabled>Select Country</option>
-                  {/* Add other country options here */}
                 </select>
               </div>
               {/* Date */}
-              <div className="w-full md:w-auto flex-1">
+              <div className="flex-1">
                 <label className="text-[14px] font-bold">Date</label>
                 <select className="w-full h-[36px] mt-2 text-[12px] text-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" defaultValue="">
                   <option value="" disabled>Select Date</option>
-                  {/* Add date options here */}
                 </select>
               </div>
               {/* Time */}
-              <div className="w-full md:w-auto flex-1">
+              <div className="flex-1">
                 <label className="text-[14px] font-bold">Time</label>
                 <select className="w-full h-[36px] mt-2 text-[12px] text-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" defaultValue="">
                   <option value="" disabled>Select Time</option>
-                  {/* Add time options here */}
                 </select>
               </div>
             </div>
           </div>
 
           {/* Arrow Button */}
-          <div className=" flex justify-center items-center w-[48px] h-[48px] bg-blue-600 text-white rounded-md self-center lg:self-auto">
-            <a href="#navbar"><BsArrowDownUp /></a>
+          <div className="flex justify-center items-center w-[48px] h-[48px] bg-blue-600 text-white rounded-md self-center lg:self-auto">
+            <BsArrowDownUp />
           </div>
 
           {/* Drop-Off */}
@@ -105,27 +105,24 @@ export default function Screen() {
             </h2>
             <div className="flex flex-wrap gap-4 mt-4">
               {/* Location */}
-              <div className="w-full md:w-auto flex-1">
+              <div className="flex-1">
                 <label className="text-[14px] font-bold">Location</label>
                 <select className="w-full h-[36px] mt-2 text-[12px] text-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" defaultValue="">
                   <option value="" disabled>Select Country</option>
-                  {/* Add other country options here */}
                 </select>
               </div>
               {/* Date */}
-              <div className="w-full md:w-auto flex-1">
+              <div className="flex-1">
                 <label className="text-[14px] font-bold">Date</label>
                 <select className="w-full h-[36px] mt-2 text-[12px] text-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" defaultValue="">
                   <option value="" disabled>Select Date</option>
-                  {/* Add date options here */}
                 </select>
               </div>
               {/* Time */}
-              <div className="w-full md:w-auto flex-1">
+              <div className="flex-1">
                 <label className="text-[14px] font-bold">Time</label>
                 <select className="w-full h-[36px] mt-2 text-[12px] text-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" defaultValue="">
                   <option value="" disabled>Select Time</option>
-                  {/* Add time options here */}
                 </select>
               </div>
             </div>

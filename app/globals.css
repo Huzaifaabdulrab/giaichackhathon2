@@ -2,56 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
-  background-color: #F6F7F9;
+body {
+  background-color: #f6f7f9;
 }
-html{
+html {
   scroll-behavior: smooth;
 }
+.logo {
+  font-weight: 700;
+}
+.sideNavTxt {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
 @media (max-width: 1023px) {
-    /* Make the container stack items vertically */
-    .relative {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      height: auto;
-    }
-  
-    /* Adjust logo placement */
-    .logo {
-      text-align: center;
-      margin-bottom: 16px;
-    }
-  
-    /* Center the search bar */
-    .searchbar {
-      width: 100%;
-      max-width: 90%; /* Add padding for smaller screens */
-      margin-bottom: 16px;
-    }
-  
-    /* Adjust profile image placement */
-    .profile {
-      margin-top: 16px;
-    }
+  /* Make the container stack items vertically */
+  .relative {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
   }
-  
-  
+
+  /* Adjust logo placement */
+  .logo {
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  /* Center the search bar */
+  .searchbar {
+    width: 100%;
+    max-width: 90%; /* Add padding for smaller screens */
+    margin-bottom: 16px;
+  }
+
+  /* Adjust profile image placement */
+  .profile {
+    margin-top: 16px;
+  }
+}
+
 @media (max-width: 768px) {
-  .secondImg{
+  .secondImg {
     display: none;
   }
-  .firstImg{
+  .firstImg {
     width: auto;
   }
-  .mainText{
+  .mainText {
     width: auto;
     margin-left: -20px;
   }
-  .h1{
+  .h1 {
     font-size: 20px;
   }
-  .box1{
+  .box1 {
     width: 50vh;
     row-gap: 10px;
     margin-top: 10px;
@@ -59,7 +65,7 @@ html{
 
     /* display: none; */
   }
-  .box2{
+  .box2 {
     width: 50vh;
     row-gap: 0px;
     margin-top: 20px;
@@ -67,5 +73,4 @@ html{
     margin-left: 10px;
     /* display: none; */
   }
-
 }

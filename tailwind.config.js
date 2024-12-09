@@ -14,6 +14,8 @@ module.exports = {
         btnBg:"#3563E9",
         pickUpText:"#90A3BF",
         iconsCard : '#90A3BF',
+        sideNav : "#90A3BF",
+        lablelTxt:'#90A3BF'
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],

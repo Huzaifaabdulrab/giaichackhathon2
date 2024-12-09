@@ -11,13 +11,13 @@ export default function Footer() {
       {/* Top Section */}
       <div className="w-full flex flex-col sm:flex-row sm:justify-between items-center sm:items-start space-y-10 sm:space-y-0 sm:space-x-6">
         {/* Vision Section */}
-        <div className="flex flex-col w-full h-[108px] items-center sm:items-start sm:flex-[1]">
+        <div className="flex flex-col items-center sm:items-start sm:flex-[1] lg:mt-[80px] lg:ml-[60px] ">
           <h1
-            className={`${poppins.className} text-[32px] font-semibold text-logo`}
+            className={`${poppins.className}   text-[32px] font-semibold text-logo`}
           >
             MORENT
           </h1>
-          <p className="mt-2 text-gray-600 text-sm max-w-[280px] sm:max-w-full text-center sm:text-left">
+          <p className="w-[292px] h-[108px]   mt-2 text-gray-600 text-sm max-w-[280px] sm:max-w-full text-center sm:text-left">
             Our vision is to provide convenience and help increase your sales
             business.
           </p>
@@ -26,8 +26,8 @@ export default function Footer() {
         {/* Links Section */}
         <div className="w-full flex flex-wrap justify-evenly sm:justify-between sm:flex-[2] gap-y-10 px-4">
           {/* About */}
-          <div className="text-center sm:text-left">
-            <h1 className={`${poppins.className} text-lg font-semibold mb-3`}>
+          <div className="lg:space-x-[400px]  text-center sm:text-left lg:mt-[80px] lg:ml-[60px] ">
+            <h1 className={`${poppins.className} lg:ml-[400px]   text-lg font-semibold mb-3`}>
               About
             </h1>
             <ul className="text-gray-600 space-y-2 text-sm">
@@ -38,7 +38,7 @@ export default function Footer() {
             </ul>
           </div>
           {/* Community */}
-          <div className="text-center sm:text-left">
+          <div className="text-center sm:text-left lg:mt-[80px] lg:ml-[60px]">
             <h1 className={`${poppins.className} text-lg font-semibold mb-3`}>
               Community
             </h1>
@@ -50,7 +50,7 @@ export default function Footer() {
             </ul>
           </div>
           {/* Social */}
-          <div className="text-center sm:text-left">
+          <div className="text-center sm:text-left lg:mt-[80px] lg:ml-[60px]">
             <h1 className={`${poppins.className} text-lg font-semibold mb-3`}>
               Social
             </h1>
