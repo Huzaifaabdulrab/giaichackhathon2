@@ -2,7 +2,6 @@
 import { useState } from "react";
 import Profile2 from "../public/images/Profill2.png"
 import Profile from "../public/images/Profill.png"
-import rightSide from "../public/images/rightSide.png"
 import leftTopImg from "../public/images/Screen1.png";
 import left1 from "../public/images/view1.png";
 import left2 from '../public/images/View 2.png';
@@ -22,7 +21,6 @@ import Car8 from "../public/images/Car8.png";
 import Car9 from "../public/images/Car9.png";
 import Car10 from "../public/images/Car10.png";
 import { Inter, Poppins } from "next/font/google";
-import review from "../public/images/Reviews.png"
 // Declare Inter font
 const inter = Poppins({
   subsets: ["latin"],

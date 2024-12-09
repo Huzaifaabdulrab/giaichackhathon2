@@ -11,21 +11,21 @@ import Car2 from "../public/images/car2.png";
 import Car3 from "../public/images/car3.png";
 
 import Car4 from "../public/images/car3.png";
-import Car15 from "../public/images/Car4.png";
+// import Car15 from "../public/images/Car4.png";
 import Car5 from "../public/images/Car5.png";
 
-import Car14 from "../public/images/Car5.png";
+// import Car14 from "../public/images/Car5.png";
 import Car6 from "../public/images/Car6.png";
 import Car7 from "../public/images/Car7.png";
-import Car16 from "../public/images/Car7.png";
+// import Car16 from "../public/images/Car7.png";
 
 import Car8 from "../public/images/Car8.png";
 import Car9 from "../public/images/Car9.png";
-import Car10 from "../public/images/Car10.png";
-import Car13 from "../public/images/Car10.png";
+// import Car10 from "../public/images/Car10.png";
+// import Car13 from "../public/images/Car10.png";
 
-import Car11 from "../public/images/Car11.png";
-import Car12 from "../public/images/Car12.png";
+// import Car11 from "../public/images/Car11.png";
+// import Car12 from "../public/images/Car12.png";
 import { BsArrowDownUp } from "react-icons/bs";
 
 import { Inter, Poppins } from "next/font/google";
