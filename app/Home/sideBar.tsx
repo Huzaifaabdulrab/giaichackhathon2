@@ -6,7 +6,7 @@ const inter = Poppins({
   
 export default function SideBar() {
     return(
-        <>        <div className="hidden lg:block w-[360px] border bg-white">
+        <>        <div className="hidden lg:block w-[360px] h-[2206px] border bg-white">
         <div className="w-[176px] h-[352px] mt-[32px] ml-[32px] gap-[32px]  ">
           <p className="sideNavTxt text-[12px] font-semibold text-sideNav mb-6">Type</p>
           <input
@@ -22,27 +22,27 @@ export default function SideBar() {
           </span>
           <input type="checkbox" checked name="#" id="#" className=" mb-6  mr-2" />
           <span className="text-gray-700  tracking-[-2%] text-[20px]">
-            SUV <span className="text-sideNav"> (10)</span>
+            SUV <span className="text-sideNav"> (12)</span>
             <br />
           </span>
           <input type="checkbox" name="#" id="#" className="mb-6  mr-2" />
           <span className="text-gray-700  tracking-[-2%] text-[20px]">
-            MPV <span className="text-sideNav"> (10)</span>
+            MPV <span className="text-sideNav"> (16)</span>
             <br />
           </span>
           <input type="checkbox" name="#" id="#" className="mb-6  mr-2" />
           <span className="text-gray-700  tracking-[-2%] text-[20px]">
-            Sedan <span className="text-sideNav"> (10)</span>
+            Sedan <span className="text-sideNav"> (20)</span>
             <br />
           </span>
           <input type="checkbox" name="#" id="#" className="mb-6  mr-2" />
           <span className="text-gray-700  tracking-[-2%] text-[20px]">
-            Coupe <span className="text-sideNav"> (10)</span>
+            Coupe <span className="text-sideNav"> (14)</span>
             <br />
           </span>
           <input type="checkbox" name="#" id="#" className="mb-6  mr-2" />
           <span className="text-gray-700  tracking-[-2%] text-[20px]">
-            Hatchback <span className="text-sideNav"> (10)</span>
+            Hatchback <span className="text-sideNav"> (14)</span>
             <br />
           </span>
         </div>
@@ -57,17 +57,17 @@ export default function SideBar() {
           </span>
           <input type="checkbox" name="#" id="#" className="mb-6  mr-2" />
           <span className="text-gray-700  tracking-[-2%] text-[20px]">
-            4 Person <span className="text-sideNav"> (10)</span>
+            4 Person <span className="text-sideNav"> (14)</span>
             <br />
           </span>
           <input type="checkbox" name="#" id="#" className="mb-6  mr-2" />
           <span className="text-gray-700  tracking-[-2%] text-[20px]">
-            6 Person <span className="text-sideNav"> (10)</span>
+            6 Person <span className="text-sideNav"> (12)</span>
             <br />
           </span>
           <input type="checkbox" checked  name="#" id="#" className="mb-6  mr-2" />
           <span className="text-gray-700  tracking-[-2%] text-[20px]">
-            8 Person <span className="text-sideNav"> (10)</span>
+            8 Person <span className="text-sideNav"> (16)</span>
             <br />
           </span>
         </div>

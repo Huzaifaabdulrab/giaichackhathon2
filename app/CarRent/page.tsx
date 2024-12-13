@@ -21,6 +21,7 @@ import Car8 from "../public/images/Car8.png";
 import Car9 from "../public/images/Car9.png";
 import Car10 from "../public/images/Car10.png";
 import SideBar from "../Home/sideBar";
+import Footer from "../Home/footer";
 
 const carData = [
   
@@ -60,6 +61,7 @@ const carData2 = [
   
 ]
 export default function CarRent() {
+ 
   const [visibleCars, setVisibleCars] = useState(12); // State to control the number of visible cars
 
   // Function to show more cars
@@ -67,7 +69,8 @@ export default function CarRent() {
     setVisibleCars((prevVisible) => prevVisible + 4); // Increase visible cars by 4
   };  
   return(
-        <div className="w-full h-full top-[124px] flex">
+    <>
+ <div className="w-full h-full top-[124px] flex">
         <SideBar/>
          <div>
          <div className="">
@@ -127,8 +130,8 @@ export default function CarRent() {
   {/* Pricing and Button */}
   <div className="flex  sm:flex-row items-start justify-between">
   <span><span className="text-[20px] lg:text-[24px] font-bold text-gray-900">$80.00/</span><span  className="text-[14px] text-gray-500 ">days</span> <span><button className="w-[140px] h-[56px] lg:w-auto  bg-blue-500 text-white text-[16px] font-medium px-6 py-3 rounded-lg shadow hover:bg-blue-600 lg:ml-44 ">
-      Rent Now
-    </button></span></span>
+    <a href="/payment"> Rent Now
+    </a>     </button></span></span>
   </div>
   <p className="text-[14px] text-gray-500 line-through ml-2">$100.00 </p>
   
@@ -195,8 +198,8 @@ export default function CarRent() {
 </div>
 
 <div className="flex gap-[100px] lg:gap-[860px]   lg:w-[1016px] lg:h-[44px] justify-center lg:ml-56 ml-5 w- h-[20px] mt-10">
-<p className="text-lablelTxt text-[16px]">Recent Car</p>
-         <p className="text-[16px] text-btnBg">View All</p>
+<p className="text-lablelTxt text-[16px]"><a href="/Home">Recent Car</a></p>
+         <p className="text-[16px] text-btnBg"><a href="/categories">View All</a></p>
 </div>
 <div className=" lg:flex   gap-6   lg:ml-28 justify-center">
           {carData.slice(0, visibleCars).map((car) => (
@@ -271,7 +274,7 @@ export default function CarRent() {
 
 <div className="flex  gap-[100px] lg:gap-[700px] lg:w-[1016px] lg:h-[44px] w-[327px] h-[20px] justify-center lg:ml-44 ml-10 mt-10">
 <p className="text-lablelTxt text-[16px]">Recomended Car</p>
-         <p className="text-[16px] text-btnBg">View All</p>
+         <p className="text-[16px] text-btnBg"><a href="/categories">View All</a></p>
 </div>
 <div className="lg:flex lg:flex-wrap lg:ml-28 mb-10 gap-6 justify-center">
 
@@ -344,11 +347,14 @@ export default function CarRent() {
             </button>
           </div>
         )}
-       
 
  </div>
+   
+</div>
+    
 </div>     
- 
-</div>     
-    )
+       
+       <Footer/>    
+</>
+)
 }

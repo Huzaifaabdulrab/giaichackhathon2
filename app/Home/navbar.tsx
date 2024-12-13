@@ -51,13 +51,13 @@ const Navbar = () => {
           <IoMdSettings className="w-[24px] h-[24px]" />
         </div>
         <div className="w-[44px] h-[44px] rounded-full overflow-hidden border border-[#C3D4E9]">
-          <Image
+          <a href="/AdminCar"><Image
             src={logo}
             alt="Profile"
             width={44}
             height={44}
             className="object-cover"
-          />
+          /></a>
         </div>
       </div>
     </div>

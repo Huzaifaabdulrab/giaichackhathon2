@@ -15,7 +15,9 @@ module.exports = {
         pickUpText:"#90A3BF",
         iconsCard : '#90A3BF',
         sideNav : "#90A3BF",
-        lablelTxt:'#90A3BF'
+        lablelTxt:'#90A3BF',
+        inputInerText :"#1A202C",
+        rotateLine : "#C3D4E966"
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
