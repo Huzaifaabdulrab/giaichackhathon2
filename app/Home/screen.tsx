@@ -1,5 +1,4 @@
 
-
 import ad1 from "../public/images/Ads 1.png";
 import ad2 from "../public/images/Ads 2.png";
 import { Button } from "@/components/ui/button";
@@ -10,9 +9,9 @@ import Cars from "./care";
 export default function Screen() {
   return (
     <>
-      <div className="w-full h-auto">
+      <div className="w-full h-auto overflow-hidden">
         {/* Card Section */}
-        <div className="flex flex-col justify-center lg:flex-row space-y-4 lg:space-y-0 lg:space-x-[30px]">
+        <div className="flex flex-col justify-center lg:flex-row space-y-4 lg:space-y-0 lg:space-x-[30px]" data-aos="fade-right">
           {/* First Card */}
           <div className="relative w-full lg:w-[640px] h-[380px] rounded-[10px]">
             <Image
@@ -34,7 +33,7 @@ export default function Screen() {
           </div>
 
           {/* Second Card */}
-          <div className="relative hidden lg:block w-full lg:w-[640px] h-[380px] rounded-[10px]">
+          <div className="relative hidden lg:block w-full lg:w-[640px] h-[380px] rounded-[10px]" data-aos="fade-left">
             <Image
               src={ad2}
               alt="Advertisement 2"
@@ -55,8 +54,9 @@ export default function Screen() {
           </div>
         </div>
 
+
         {/* Pick-Up and Drop-Off Section */}
-        <div className="flex flex-col justify-center lg:flex-row space-y-4 lg:space-y-0 lg:space-x-[20px] mt-8">
+                <div className="flex flex-col justify-center lg:flex-row space-y-4 lg:space-y-0 lg:space-x-[20px] mt-8">
           {/* Pick-Up */}
           <div className="w-full lg:w-[600px] bg-white p-4 rounded-lg shadow-md">
             <h2 className="flex items-center space-x-2">

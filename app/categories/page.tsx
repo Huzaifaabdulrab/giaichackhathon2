@@ -8,31 +8,26 @@ import Image from "next/image";
 import Car1 from "../public/images/car1.png";
 import Car2 from "../public/images/car2.png";
 import Car3 from "../public/images/car3.png";
-
 import Car4 from "../public/images/car3.png";
-// import Car15 from "../public/images/Car4.png";
 import Car5 from "../public/images/Car5.png";
-
-// import Car14 from "../public/images/Car5.png";
 import Car6 from "../public/images/Car6.png";
 import Car7 from "../public/images/Car7.png";
-// import Car16 from "../public/images/Car7.png";
-
 import Car8 from "../public/images/Car8.png";
 import Car9 from "../public/images/Car9.png";
-// import Car10 from "../public/images/Car10.png";
-// import Car13 from "../public/images/Car10.png";
-
-// import Car11 from "../public/images/Car11.png";
-// import Car12 from "../public/images/Car12.png";
 import { BsArrowDownUp } from "react-icons/bs";
+import { Poppins } from "next/font/google";
+import { FaBars } from "react-icons/fa";
+import { FaX } from "react-icons/fa6";
+import Footer from "../Home/footer";
+import Link from "next/link";
 
-import {  Poppins } from "next/font/google";
-// Declare Inter font
+// Declare Poppins font
 const inter = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
+
+
 const carData = [
   {
     id: 1,
@@ -156,95 +151,120 @@ const carData = [
 ];
 export default function AllCars() {
   const [visibleCars, setVisibleCars] = useState(12); // State to control the number of visible cars
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State to control side menu visibility
 
   // Function to show more cars
   const showMoreCars = () => {
     setVisibleCars((prevVisible) => prevVisible + 4); // Increase visible cars by 4
   };
 
+  // Function to toggle the side menu
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <>
-      <div className="w-full h-[1600px] top-[124px] flex">
-        <div className="hidden lg:block w-[360px] h-[1600px] border bg-white">
-          <div className="w-[176px] h-[352px] mt-[32px] ml-[32px] gap-[32px]  ">
-            <p className="sideNavTxt text-[12px] font-semibold text-sideNav mb-6">Type</p>
+      <div className="overflow-hidden w-full h-auto flex flex-col lg:flex-row">
+        {/* Toggle Button for Mobile */}
+        <button
+          onClick={toggleMenu}
+          className="lg:hidden absolute  rounded-full  w- p-3 border  text-black text-lg left-10  top-[124px] text-center"
+        >
+          {isMenuOpen ? <FaX/> : <FaBars  className=""/>}
+        </button>
+
+        {/* Side Menu */}
+        <div
+          className={`${
+            isMenuOpen ? "block" : "hidden"
+          } lg:block  w-full lg:w-[360px] h-auto lg:h-[1600px] border bg-white`}
+        >
+          <div className="w-[176px] h-[352px] mt-[32px] ml-[32px] gap-[32px]">
+            <p className="sideNavTxt text-[12px] font-semibold text-sideNav mb-6">
+              Type
+            </p>
             <input
               type="checkbox"
-              checked 
+              checked
               name="Sport"
               id="Sport"
-              className="mb-6  mr-2"
+              className="mb-6 mr-2"
             />
-            <span className="text-gray-700  tracking-[-2%] text-[20px]">
+            <span className="text-gray-700 tracking-[-2%] text-[20px]">
               Sport <span className="text-sideNav"> (10)</span>
               <br />
             </span>
-            <input type="checkbox" checked name="#" id="#" className=" mb-6  mr-2" />
-            <span className="text-gray-700  tracking-[-2%] text-[20px]">
+            <input type="checkbox" checked name="#" id="#" className="mb-6 mr-2" />
+            <span className="text-gray-700 tracking-[-2%] text-[20px]">
               SUV <span className="text-sideNav"> (10)</span>
               <br />
             </span>
-            <input type="checkbox" name="#" id="#" className="mb-6  mr-2" />
-            <span className="text-gray-700  tracking-[-2%] text-[20px]">
+            <input type="checkbox" name="#" id="#" className="mb-6 mr-2" />
+            <span className="text-gray-700 tracking-[-2%] text-[20px]">
               MPV <span className="text-sideNav"> (10)</span>
               <br />
             </span>
-            <input type="checkbox" name="#" id="#" className="mb-6  mr-2" />
-            <span className="text-gray-700  tracking-[-2%] text-[20px]">
+            <input type="checkbox" name="#" id="#" className="mb-6 mr-2" />
+            <span className="text-gray-700 tracking-[-2%] text-[20px]">
               Sedan <span className="text-sideNav"> (10)</span>
               <br />
             </span>
-            <input type="checkbox" name="#" id="#" className="mb-6  mr-2" />
-            <span className="text-gray-700  tracking-[-2%] text-[20px]">
+            <input type="checkbox" name="#" id="#" className="mb-6 mr-2" />
+            <span className="text-gray-700 tracking-[-2%] text-[20px]">
               Coupe <span className="text-sideNav"> (10)</span>
               <br />
             </span>
-            <input type="checkbox" name="#" id="#" className="mb-6  mr-2" />
-            <span className="text-gray-700  tracking-[-2%] text-[20px]">
+            <input type="checkbox" name="#" id="#" className="mb-6 mr-2" />
+            <span className="text-gray-700 tracking-[-2%] text-[20px]">
               Hatchback <span className="text-sideNav"> (10)</span>
               <br />
             </span>
           </div>
-          
-          <div className="w-[176px] h-[352px] mt-[32px] ml-[32px] gap-[32px] ">
-            <p className="sideNavTxt text-[12px] font-semibold text-sideNav mb-6 ">CAPACITY</p>
 
-            <input type="checkbox" checked  name="#" id="#" className="mb-6  mr-2" />
-            <span className="text-gray-700  tracking-[-2%] text-[20px]">
+          <div className="w-[176px] h-[352px] mt-[32px] ml-[32px] gap-[32px]">
+            <p className="sideNavTxt text-[12px] font-semibold text-sideNav mb-6">
+              CAPACITY
+            </p>
+            <input type="checkbox" checked name="#" id="#" className="mb-6 mr-2" />
+            <span className="text-gray-700 tracking-[-2%] text-[20px]">
               2 Person <span className="text-sideNav"> (10)</span>
               <br />
             </span>
-            <input type="checkbox" name="#" id="#" className="mb-6  mr-2" />
-            <span className="text-gray-700  tracking-[-2%] text-[20px]">
+            <input type="checkbox" name="#" id="#" className="mb-6 mr-2" />
+            <span className="text-gray-700 tracking-[-2%] text-[20px]">
               4 Person <span className="text-sideNav"> (10)</span>
               <br />
             </span>
-            <input type="checkbox" name="#" id="#" className="mb-6  mr-2" />
-            <span className="text-gray-700  tracking-[-2%] text-[20px]">
+            <input type="checkbox" name="#" id="#" className="mb-6 mr-2" />
+            <span className="text-gray-700 tracking-[-2%] text-[20px]">
               6 Person <span className="text-sideNav"> (10)</span>
               <br />
             </span>
-            <input type="checkbox" checked  name="#" id="#" className="mb-6  mr-2" />
-            <span className="text-gray-700  tracking-[-2%] text-[20px]">
+            <input type="checkbox" checked name="#" id="#" className="mb-6 mr-2" />
+            <span className="text-gray-700 tracking-[-2%] text-[20px]">
               8 Person <span className="text-sideNav"> (10)</span>
               <br />
             </span>
           </div>
-          <div className="rang">
-            
-          <div className="w-[176px] h-[352px]  ml-[32px] gap-[32px] ">
-            <p className="sideNavTxt text-[12px] font-semibold text-sideNav mb-6 ">PRICE</p>
-            <input type="range" className="w-[200px] h-[20px]"/>
-            <p className={`text-[20px] text-[#596780] font-semibold ${inter.className} `}>Max . $100.00</p>
-            </div>
-            
+
+          <div className="w-[176px] h-[352px] ml-[32px] gap-[32px]">
+            <p className="sideNavTxt text-[12px] font-semibold text-sideNav mb-6">
+              PRICE
+            </p>
+            <input type="range" className="w-[200px] h-[20px]" />
+            <p className={`text-[20px] text-[#596780] font-semibold ${inter.className}`}>
+              Max . $100.00
+            </p>
           </div>
         </div>
-        <div>
+
+        {/* Main Content */}
+        <div className="flex-1">
           {/* Pick-Up and Drop-Off Section */}
           <div className="flex flex-col justify-center mt-[32px] lg:ml-[30px] lg:flex-row space-y-4 lg:space-y-0 lg:space-x-[20px] mt-8">
             {/* Pick-Up */}
-            <div className="w-full lg:[464px] h-[123px]  lg:w-[600px] bg-white p-4 rounded-lg shadow-md">
+            <div className="w-full lg:w-[464px] h-[123px] lg:w-[600px] bg-white p-4 rounded-lg shadow-md">
               <h2 className="flex items-center space-x-2">
                 <span className="bg-gray-300 w-[20px] h-[20px] rounded-full flex justify-center items-center">
                   <span className="bg-blue-700 w-[10px] h-[10px] rounded-full"></span>
@@ -297,7 +317,7 @@ export default function AllCars() {
             </div>
 
             {/* Drop-Off */}
-            <div className="w-full lg:[464px] h-[123px] lg:w-[600px] bg-white p-4 rounded-lg shadow-md">
+            <div className="w-full lg:w-[464px] h-[123px] lg:w-[600px] bg-white p-4 rounded-lg shadow-md">
               <h2 className="flex items-center space-x-2">
                 <span className="bg-gray-300 w-[20px] h-[20px] rounded-full flex justify-center items-center">
                   <span className="bg-blue-700 w-[10px] h-[10px] rounded-full"></span>
@@ -346,7 +366,7 @@ export default function AllCars() {
           </div>
 
           {/* Cars Section */}
-          <div className="flex flex-wrap gap-[32px] justify-center lg:w-[1015px] lg:ml-[10%] h-[1228px] mt-[100px] left-[392px]">
+          <div className="flex flex-wrap gap-[32px] justify-center lg:w-[1015px] lg:ml-[10%] h-auto mt-[100px]">
             {carData.slice(0, visibleCars).map((car) => (
               <div
                 key={car.id}
@@ -400,7 +420,7 @@ export default function AllCars() {
                     </span>
                   </p>
                   <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
-                    Rent Now
+                <Link href="/CarRent"> Rent Now</Link>
                   </button>
                 </div>
               </div>
@@ -416,14 +436,11 @@ export default function AllCars() {
               >
                 Show More Cars
               </button>
-    
             </div>
           )}
-    <div></div>
         </div>
-      
       </div>
-    
+      <Footer/>
     </>
   );
 }

@@ -15,6 +15,7 @@ html {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
+
 @media (max-width: 1023px) {
   /* Make the container stack items vertically */
   .relative {
@@ -77,4 +78,137 @@ html {
 .Pick{
   font-weight: 600;
   
+}
+/* ? */
+/* .first{
+  background-color: aqua;
+}
+.second{
+  background-color: rgb(1, 71, 71);
+}
+.three{
+  background-color: rgb(21, 0, 248);
+}
+.four{
+  background-color: rgb(131, 203, 14);
+}
+.five{
+  background-color: rgb(132, 28, 184);
+}
+.six{
+  background-color: rgb(13, 145, 145);
+}
+.seven{
+  background-color: rgb(224, 77, 207);
+}
+.eight{
+  background-color: rgb(104, 203, 160);
+}
+.nine{
+  background-color: rgb(206, 189, 109);
+}
+.ten{
+  background-color: rgb(202, 113, 203);
+}
+.eleven{
+  background-color: rgb(78, 193, 46);
+}
+.twelve{
+  background-color: rgb(164, 219, 148);
+}
+.thirteen{
+  background-color: rgb(5, 43, 38);
+}
+.fourteen{
+  background-color: rgb(115, 238, 148);
+}
+.fivteen{
+  background-color: rgb(57, 64, 210);
+} */
+@media (min-width:10px) {
+  .first{
+    width:100%;
+    height: 100%;
+  }
+  .four{
+    height:auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+  }
+  .second,.three{
+    margin:0px;
+    margin:30px 0 30px 0;
+    padding: 20px;
+    
+  }
+  .three{
+    width: 550px;
+    height: auto;
+  }
+  .second{
+    height:900px ;
+  }
+ .seven{
+  width: 100%;
+  flex-wrap: nowrap;
+ }
+
+  .eight{
+    position:sticky;
+    top: 0;
+  }
+  .nine{
+    width: 100%;
+  }
+  .six{
+  display: flex;
+  align-items: center;
+  height: 50px;
+  }
+  .pera{
+    width:  100%;
+    margin-left: 30px;
+  }
+  .pera2{
+    width: 80px;
+  }
+}
+@media (max-width:570px){
+ .second,.three{
+  width: 90%;
+ }
+ .ten{
+  width: 100%;
+ }
+ .fivteen{
+  width: 40%;
+ }
+ .nine{
+  margin-left: 2px;
+ }
+ 
+}
+@media (max-width:435px) {
+  .rounded-md{
+    width: 90%;
+  }
+  .eleven{
+    font-size: 15px;
+  }
+  .fourteen{
+    font-size: 10px;
+    margin-left: 5px;
+  }
+  .five{
+    height: 200px;
+  }
+  .second{
+    height: 750px;
+  }
+  .twelve{
+    width: 100%;
+  }
 }

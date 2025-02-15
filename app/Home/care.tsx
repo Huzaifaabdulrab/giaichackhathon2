@@ -1,33 +1,30 @@
 'use client'
-import { useState } from "react";
-import { Inter } from "next/font/google";
-import { BsFuelPumpFill } from "react-icons/bs";
-import { HiUsers } from "react-icons/hi2";
-import { LuLoaderPinwheel } from "react-icons/lu";
-import { IoHeartSharp } from "react-icons/io5";
-import { IoHeartOutline } from "react-icons/io5";
-import Image from "next/image";
+import { useState, useEffect } from 'react';
+import AOS from 'aos'; 
+import 'aos/dist/aos.css'; 
+import { Inter } from 'next/font/google';
+import { BsFuelPumpFill } from 'react-icons/bs';
+import { HiUsers } from 'react-icons/hi2';
+import { LuLoaderPinwheel } from 'react-icons/lu';
+import { IoHeartSharp, IoHeartOutline } from 'react-icons/io5';
+import Image from 'next/image';
 import Car1 from "../public/images/car1.png";
 import Car2 from '../public/images/car2.png';
 import Car4 from "../public/images/car3.png";
-
-
 import Car3 from "../public/images/car3.png";
 import Car15 from "../public/images/Car4.png";
 import Car5 from "../public/images/Car5.png";
-
 import Car14 from "../public/images/Car5.png";
 import Car6 from "../public/images/Car6.png"
 import Car7 from "../public/images/Car7.png";
 import Car16 from "../public/images/Car7.png";
-
 import Car8 from "../public/images/Car8.png";
 import Car9 from "../public/images/Car9.png";
 import Car10 from "../public/images/Car10.png";
 import Car13 from "../public/images/Car10.png";
-
 import Car11 from "../public/images/Car11.png";
 import Car12 from "../public/images/Car12.png"
+import Footer from "./footer";
 
 
 // Declare Inter font
@@ -57,17 +54,23 @@ const carData = [
 ];
 
 export default function Cars() {
-  const [visibleCars, setVisibleCars] = useState(12); // State to control the number of visible cars
+  const [visibleCars, setVisibleCars] = useState(12);
 
-  // Function to show more cars
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, 
+      easing: 'ease-in-out', 
+            once: false,
+    });
+  }, []);
+
   const showMoreCars = () => {
-    setVisibleCars((prevVisible) => prevVisible + 4); // Increase visible cars by 4
+    setVisibleCars((prevVisible) => prevVisible + 4);
   };
 
   return (
     <>
       <div className={`relative w-full min-h-screen p-6 ${inter.className}`}>
-        {/* Heading */}
         <div className="flex gap-[50px] lg:justify-center items-center mb-8 lg:gap-[1079px]">
           <p className="text-lg text-[#90A3BF] font-semibold">Popular Cars</p>
           <p className="text-sm text-blue-600 cursor-pointer hover:underline">
@@ -75,11 +78,12 @@ export default function Cars() {
           </p>
         </div>
 
-        {/* Cars Section */}
+        {/* Cars Section with AOS Animation */}
         <div className="flex flex-wrap gap-6 justify-center">
           {carData.slice(0, visibleCars).map((car) => (
             <div
               key={car.id}
+              data-aos="fade-up" // Add AOS animation here
               className="w-[304px] h-[408px] bg-white rounded-lg shadow-md p-4 flex flex-col"
             >
               <div className="flex justify-between items-center mb-4">
@@ -88,15 +92,13 @@ export default function Cars() {
                   <span className="text-sm text-gray-500">{car.type}</span>
                 </span>
 
-                {/* Heart Icon */}
-                {car.heartColor === "pink" ? (
+                {car.heartColor === 'pink' ? (
                   <IoHeartSharp className="ml-2 text-[#ED3F3F] w-[24px] h-[24px]" />
                 ) : (
                   <IoHeartOutline className="ml-2 text-gray-500 w-[24px] h-[24px]" />
                 )}
               </div>
 
-              {/* Car Image */}
               <div className="mb-4">
                 <Image
                   src={car.image}
@@ -107,7 +109,6 @@ export default function Cars() {
                 />
               </div>
 
-              {/* Specifications */}
               <div className="flex justify-between mt-14">
                 <span className="flex items-center text-iconsCard gap-1 text-[14px] font-medium">
                   <BsFuelPumpFill className="w-[24px] h-[24px]" /> {car.fuel}
@@ -120,10 +121,9 @@ export default function Cars() {
                 </span>
               </div>
 
-              {/* Footer */}
               <div className="flex justify-between items-center mt-7">
                 <p className="text-xl font-semibold text-gray-800">
-                  {car.price}/{" "}
+                  {car.price}/{' '}
                   <span className="text-iconsCard text-[14px]">{car.duration}</span>
                 </p>
                 <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
@@ -134,8 +134,7 @@ export default function Cars() {
           ))}
         </div>
 
-        {/* Show More Cars Button */}
-        {visibleCars < carData.length && ( // Only show button if there are more cars to display
+        {visibleCars < carData.length && (
           <div className="flex justify-center mt-8">
             <button
               className="w-[156px] h-[44px] bg-btnBg rounded-[4px] items-center justify-center p-[8px] text-white"
@@ -146,6 +145,102 @@ export default function Cars() {
           </div>
         )}
       </div>
+      <Footer />
     </>
   );
 }
+
+// export default function Cars() {
+//   const [visibleCars, setVisibleCars] = useState(12); // State to control the number of visible cars
+
+//   // Function to show more cars
+//   const showMoreCars = () => {
+//     setVisibleCars((prevVisible) => prevVisible + 4); // Increase visible cars by 4
+//   };
+
+//   return (
+//     <>
+//       <div className={`relative w-full min-h-screen p-6 ${inter.className}`}>
+//         {/* Heading */}
+//         <div className="flex gap-[50px] lg:justify-center items-center mb-8 lg:gap-[1079px]">
+//           <p className="text-lg text-[#90A3BF] font-semibold">Popular Cars</p>
+//           <p className="text-sm text-blue-600 cursor-pointer hover:underline">
+//             <a href="/categories">View All</a>
+//           </p>
+//         </div>
+
+//         {/* Cars Section */}
+//         <div className="flex flex-wrap gap-6 justify-center">
+//           {carData.slice(0, visibleCars).map((car) => (
+//             <div
+//               key={car.id}
+//               className="w-[304px] h-[408px] bg-white rounded-lg shadow-md p-4 flex flex-col"
+//             >
+//               <div className="flex justify-between items-center mb-4">
+//                 <span className="text-lg font-bold w-full text-gray-800 flex flex-col">
+//                   {car.name}
+//                   <span className="text-sm text-gray-500">{car.type}</span>
+//                 </span>
+
+//                 {/* Heart Icon */}
+//                 {car.heartColor === "pink" ? (
+//                   <IoHeartSharp className="ml-2 text-[#ED3F3F] w-[24px] h-[24px]" />
+//                 ) : (
+//                   <IoHeartOutline className="ml-2 text-gray-500 w-[24px] h-[24px]" />
+//                 )}
+//               </div>
+
+//               {/* Car Image */}
+//               <div className="mb-4">
+//                 <Image
+//                   src={car.image}
+//                   alt={`${car.name} Image`}
+//                   width={232}
+//                   height={132}
+//                   className="mx-auto mt-10"
+//                 />
+//               </div>
+
+//               {/* Specifications */}
+//               <div className="flex justify-between mt-14">
+//                 <span className="flex items-center text-iconsCard gap-1 text-[14px] font-medium">
+//                   <BsFuelPumpFill className="w-[24px] h-[24px]" /> {car.fuel}
+//                 </span>
+//                 <span className="flex items-center text-iconsCard gap-1 text-[14px] font-medium">
+//                   <LuLoaderPinwheel className="w-[24px] h-[24px]" /> {car.transmission}
+//                 </span>
+//                 <span className="flex items-center text-iconsCard gap-1 text-[14px] font-medium">
+//                   <HiUsers className="w-[24px] h-[24px]" /> {car.people}
+//                 </span>
+//               </div>
+
+//               {/* Footer */}
+//               <div className="flex justify-between items-center mt-7">
+//                 <p className="text-xl font-semibold text-gray-800">
+//                   {car.price}/{" "}
+//                   <span className="text-iconsCard text-[14px]">{car.duration}</span>
+//                 </p>
+//                 <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+//                   <a href="/CarRent">Rent Now</a>
+//                 </button>
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+
+//         {/* Show More Cars Button */}
+//         {visibleCars < carData.length && ( // Only show button if there are more cars to display
+//           <div className="flex justify-center mt-8">
+//             <button
+//               className="w-[156px] h-[44px] bg-btnBg rounded-[4px] items-center justify-center p-[8px] text-white"
+//               onClick={showMoreCars}
+//             >
+//               Show More Cars
+//             </button>
+//           </div>
+//         )}
+//       </div>
+// <Footer/>
+//     </>
+//   );
+// }
