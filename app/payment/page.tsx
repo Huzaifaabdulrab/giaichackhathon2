@@ -6,19 +6,19 @@ import Card1 from "../public/images/card1.png";
 import layer from "../public/images/Layer.png";
 import Image from "next/image";
 import Footer from "../Home/footer";
-import { useState } from "react";
+// import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 export default function Payment() {
-const [state , setState]=useState(false)
-const route =useRouter()
-  const handleState=()=>{
-  setState(true)
- alert("Thank you")
- route.push("/")
+  // const [state, setState] = useState(false)
+  const route = useRouter()
+  const handleState = () => {
+    // setState(true)
+    alert("Thank you")
+    route.push("/")
 
 
-}
+  }
   return (
     <>
       <div className="w-full h-auto mt-[50px] flex flex-col lg:flex-row lg:justify-between lg:items-start p-4 sm:p-6">
@@ -247,8 +247,8 @@ const route =useRouter()
                 </label>
               </div>
             </div>
-            <button onClick={handleState}  className="w-[140px] h-[56px] mt-6 bg-blue-700 text-white rounded-[10px] text-[16px]">
-            Rent Now
+            <button onClick={handleState} className="w-[140px] h-[56px] mt-6 bg-blue-700 text-white rounded-[10px] text-[16px]">
+              Rent Now
             </button>
             <Image src={layer} alt="Layer Image" className="mt-6" />
             <div className="w-full h-auto mt-6">

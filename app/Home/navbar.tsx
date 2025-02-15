@@ -4,7 +4,6 @@ import { IoMdSettings } from "react-icons/io";
 import { CiSearch } from "react-icons/ci";
 import filter from "../public/images/filter.png";
 import logo from "../public/images/command.png";
-import { Bell } from 'lucide-react';
 import { Inter } from 'next/font/google';
 import { BiBell } from 'react-icons/bi';
 import Link from 'next/link';
